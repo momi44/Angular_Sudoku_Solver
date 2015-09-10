@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Sudoku</title>
+
+        <!--   Main CSS     -->
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css">
+        
+
+    </head>
+    <body ng-app="sudoku">
+        <header>Sudoku</header>
+          
+        <div class="container middle-container" ng-controller="tDrawCtr">
+            <div class="row">
+                
+            <!--   Main Table     -->
+                <div class="col-sm-5 col-md-5 col-lg-5 center">
+                    <t-draw-main></t-draw-main>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 center">
+                        <button id="btn" class="btn btn-lg" type="submit" ng-click="solve()">Solve</button>
+                </div>
+             <!--  Result Table  -->
+                <div class="col-sm-5 col-md-5 col-lg-5 center">
+                    <t-draw-result></t-draw-result>
+                </div>
+            </div>
+        </div>
+        
+        <br/>
+        <p>Want to know more about the game? click <a href="https://en.wikipedia.org/wiki/Sudoku">here</a></p>
+        
+        
+        
+
+        <!--  DENPENDENCIES    -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="script/app.js"></script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    </body>
+</html>
